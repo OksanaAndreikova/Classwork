@@ -83,6 +83,116 @@ p{
 p.subtitle{
     @include typography(20pt, $font-medium, $d24);
 }
+ul li{
+    
+     @include typography(15pt, $font-medium, $d14);  
+    list-style-type: none;
+    list-style-image: url(../../../img/okpng.png);
+}
+blockquote{
+    @include typography(17pt, $font-regular, $d11);
+    background-color: $l31;
+    border-left: 2px solid $p1;
+    padding: 10px 30px;
+}
+.btn-xl button{
+    height: 50px;
+    border-radius: 3px;
+    font-family: $font-bold;
+    margin-bottom: 10px;
+}
+@mixin button ($bg-color, $border:transparent, $f-color:$light) {
+    background-color: $bg-color;
+    border-color: $border;
+    color: $f-color;
+}
+.btn-xl .btn1{
+    width: 220px;
+}
+.btn-xl .btn2{
+    width: 280px;
+}
+.btn-xl .btn3{
+    width: 201px;
+}
+.btn-xl .btn4{
+    width: 220px;
+}
+.btn-xl .btn5{
+    width: 201px;
+}
+//------------------------------------------
+.btn-xs button{
+    height: 40px;
+    border-radius: 3px;
+    font-family: $font-bold;
+    margin-bottom: 10px;
+}
+.btn-xs .btn1{
+    width: 150px;
+}
+.btn-xs .btn2{
+    width: 170px;
+}
+.btn-xs .btn3{
+    width: 150px;
+}
+.btn-xs .btn4{
+    width: 150px;
+}
+.btn-xs .btn5{
+    width: 150px;
+}
+//----------------------------------------
+.normal .btn1{
+    @include button($p2);
+}
+.normal .btn2{
+    @include button($d11);
+}
+.normal .btn3{
+    @include button($d11);
+}
+.normal .btn4{
+    @include button(transparent, $p2, $p2);
+}
+.normal .btn5{
+    @include button(transparent, $p1, $p1);
+}
+// ------------------------------------------------------------------
+
+.hover .btn1{
+    @include button($l12);
+}
+.hover .btn2{
+    @include button($l21);
+}
+.hover .btn3{
+    @include button($l21);
+}
+.hover .btn4{
+    @include button($l12);
+}
+.hover .btn5{
+    @include button($l21);
+}
+//-------------------------------------------------------------------------
+.disabled .btn1{
+    @include button($l24);
+}
+.disabled .btn2{
+    @include button($l24);
+}
+.disabled .btn3{
+    @include button($l24);
+}
+.disabled .btn4{
+    @include button($l24);
+}
+.disabled .btn5{
+    @include button($l24);
+}
+
 
 .color{
     background-color: aqua;
